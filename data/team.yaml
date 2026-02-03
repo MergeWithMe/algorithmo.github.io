@@ -1,0 +1,42 @@
+title: "Meet Our Team"
+subtitle: "The talented people behind Algorithmo's success"
+
+leadership:
+  - name: "Dr. Daniel Cagara"
+    role: "CEO & Founder"
+    image: "https://ui-avatars.com/api/?name=Daniel+Cagara&size=400&background=5d57a3&color=fff"
+    bio: "With a PhD in Computer Science and over 15 years of experience leading technology teams, Dr. Cagara founded Algorithmo to help businesses harness the power of AI and modern application development. His vision combines academic rigor with practical business experience, having previously led engineering teams at major tech companies and consulted for Fortune 500 clients. Daniel is passionate about making complex technology accessible and ensuring every solution delivers measurable business value."
+    linkedin: "#"
+
+  - name: "Sarah Schmidt"
+    role: "CTO"
+    image: "https://ui-avatars.com/api/?name=Sarah+Schmidt&size=400&background=d33a77&color=fff"
+    bio: "Sarah brings 12 years of experience in scalable architecture design and machine learning systems. Before joining Algorithmo, she architected cloud infrastructure for a leading fintech company and led ML initiatives at a healthcare startup. Her expertise spans distributed systems, MLOps, and building teams that deliver quality at scale. Sarah ensures our technical solutions are not just cutting-edge, but also maintainable and production-ready."
+    linkedin: "#"
+
+development_team:
+  - name: "Thomas Weber"
+    role: "Lead Mobile Developer"
+    image: "https://ui-avatars.com/api/?name=Thomas+Weber&size=400&background=5d57a3&color=fff"
+    bio: "Thomas specializes in cross-platform and native mobile development with 8+ years of experience building apps that have collectively been downloaded millions of times. He's an expert in Flutter, React Native, Swift, and Kotlin, with a keen eye for user experience and performance optimization. Thomas leads our mobile development practice and mentors junior developers."
+
+  - name: "Lisa Chen"
+    role: "Senior ML Engineer"
+    image: "https://ui-avatars.com/api/?name=Lisa+Chen&size=400&background=d33a77&color=fff"
+    bio: "With a PhD in Computer Science focusing on deep learning and NLP, Lisa transforms complex research into practical business applications. She's built recommendation systems, predictive models, and natural language processing solutions for clients across industries. Lisa's ability to explain machine learning in business terms makes her invaluable in client engagements and strategy sessions."
+
+  - name: "Markus Hoffmann"
+    role: "Full-Stack Developer"
+    image: "https://ui-avatars.com/api/?name=Markus+Hoffmann&size=400&background=5d57a3&color=fff"
+    bio: "Markus is a versatile full-stack developer with expertise in React, Node.js, Python, and cloud infrastructure. His 6 years of experience span startups and enterprises, giving him perspective on solutions that work at different scales. He's particularly skilled at integrating modern frontends with legacy systems and optimizing application performance."
+
+analytics_team:
+  - name: "Julia Meier"
+    role: "Analytics Consultant"
+    image: "https://ui-avatars.com/api/?name=Julia+Meier&size=400&background=d33a77&color=fff"
+    bio: "Google Analytics certified with 7 years of experience in digital analytics and data strategy, Julia helps clients transform data into actionable insights. She's implemented analytics for e-commerce, SaaS, and media companies, always with a focus on GDPR compliance and privacy-first measurement. Julia excels at translating complex data into clear recommendations that drive business decisions."
+
+  - name: "Michael Bauer"
+    role: "Data Engineer"
+    image: "https://ui-avatars.com/api/?name=Michael+Bauer&size=400&background=5d57a3&color=fff"
+    bio: "Michael builds the data infrastructure that powers our analytics and ML solutions. With expertise in data warehousing, ETL pipelines, and big data technologies, he ensures data flows smoothly from source to insight. His background includes 5 years at a major data platform company and contributions to open-source data engineering tools."

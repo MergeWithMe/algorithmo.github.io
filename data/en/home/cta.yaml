@@ -1,0 +1,8 @@
+enable: true
+
+title: "Ready to start?"
+text: "Tell us about your project. We'll get back to you within 24 hours."
+image: "images/hero-image.png"
+button:
+  label: "Get in Touch"
+  link: "/contact"

@@ -1,0 +1,17 @@
+enable: true
+
+title: "Warum mit uns arbeiten"
+text: "Was uns unterscheidet"
+
+points:
+  - title: "Kein Overhead"
+    text: "Kleines Team, direkte Kommunikation. Sie arbeiten mit den Leuten, die Ihr Produkt tatsächlich entwickeln."
+
+  - title: "DACH-Fokus"
+    text: "Standort Düsseldorf. Wir verstehen deutsche Geschäftskultur und DSGVO-Anforderungen."
+
+  - title: "Produktionsqualität"
+    text: "Wir schreiben Code, auf den wir stolz sind. Getestet, dokumentiert, wartbar."
+
+  - title: "Schnelle Umsetzung"
+    text: "Die meisten Projekte starten innerhalb von 2 Wochen. Regelmäßige Updates, keine Überraschungen."

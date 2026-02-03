@@ -1,0 +1,38 @@
+enable: false
+
+items:
+  - image: "images/portfolio-ecommerce.png"
+    pretitle: "E-Commerce Intelligence"
+    title: "Real-Time Personalization at Scale"
+    text: "Modern e-commerce demands intelligent recommendation systems that process millions of data points in real-time. Our approach combines collaborative filtering, deep learning embeddings, and contextual bandits to deliver personalized product suggestions that adapt continuously. We architect systems handling 100,000+ requests per day, with sub-50ms response times and continuous learning from user interactions. The technology stack includes TensorFlow for model training, Redis for caching, and distributed systems for horizontal scalability."
+
+    buttons:
+      - label: "AI/ML Capabilities"
+        link: "/services/ai-ml"
+
+      - label: "Discuss Your Project"
+        link: "/contact"
+
+  - image: "images/portfolio-ecommerce.png"
+    pretitle: "High-Performance Systems"
+    title: "Building Platforms That Handle Millions"
+    text: "Financial applications, trading platforms, and high-traffic systems require architectures that never compromise on speed or reliability. We specialize in microservices architectures with event-driven patterns, real-time WebSocket connections for live data streams, and horizontal scaling strategies that grow with your user base. Our stack leverages React for responsive frontends, Node.js and Go for high-throughput backends, PostgreSQL with read replicas, and Redis for caching. Security is baked in from day one with encryption at rest and in transit, JWT authentication, and bank-level compliance standards."
+
+    buttons:
+      - label: "App Development"
+        link: "/services/app-development"
+
+      - label: "Start Building"
+        link: "/contact"
+
+  - image: "images/portfolio-ecommerce.png"
+    pretitle: "Data Infrastructure"
+    title: "From Fragmented Data to Unified Intelligence"
+    text: "Enterprise analytics requires more than dashboards—it demands robust data pipelines that unify disparate sources into coherent insights. We architect cloud data warehouses on BigQuery or Snowflake, design ETL pipelines with Airflow or Fivetran, and build real-time streaming analytics with Kafka. Visualization layers in Tableau, Looker, or custom React dashboards transform raw data into decision-making tools. Everything GDPR-compliant by design, with proper data governance, access controls, and audit trails."
+
+    buttons:
+      - label: "Analytics Solutions"
+        link: "/services/analytics"
+
+      - label: "Let's Talk Data"
+        link: "/contact"

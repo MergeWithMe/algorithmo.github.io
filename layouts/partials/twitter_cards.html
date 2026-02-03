@@ -1,0 +1,35 @@
+{{ $title := .Title }}
+{{ if .IsHome }}
+  {{ $title = .Site.Title }}
+{{ else if (eq .Title .Site.Title) }}
+  {{ $title = .Site.Title }}
+{{ else }}
+  {{ $title = printf "%s | %s" .Title .Site.Title }}
+{{ end }}
+
+{{ $description := .Site.Params.description }}
+{{ if .Description }}
+  {{ $description = .Description }}
+{{ else if .Summary }}
+  {{ $description = .Summary }}
+{{ end }}
+
+{{ $image := "" }}
+{{ if .Params.image }}
+  {{ $image = .Params.image | absURL }}
+{{ else if .Site.Params.image }}
+  {{ $image = .Site.Params.image | absURL }}
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+{{ with $image }}
+<meta name="twitter:image" content="{{ . }}" />
+{{ end }}
+{{ with .Site.Params.social.twitter }}
+<meta name="twitter:site" content="@{{ . }}" />
+<meta name="twitter:creator" content="@{{ . }}" />
+{{ end }}

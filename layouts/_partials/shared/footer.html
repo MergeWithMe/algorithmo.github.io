@@ -1,72 +1,101 @@
-<footer class="bg-tertiary/25 py-16">
+<footer style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); padding: 4rem 0 2rem; color: #ffffff;">
   <div class="container mx-auto px-4">
-    <div class="mb-8 grid gap-8 xl:grid-cols-12">
-      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
-        <a class="flex items-center" href="{{ site.BaseURL }}">
-          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">{{ site.Title }}</span>
-        </a>
-        <p class="text-center text-sm xl:text-start">{{ site.Params.description }}</p>
-        {{ with .Site.Params.social }}
-          <ul class="flex gap-4">
-            {{ with .dribbble }}
-              <li class="bg-primary/10 text-primary flex size-8 items-center justify-center rounded-full">
-                <a class="" href="{{ . }}" aria-label="Dribble">{{ partial "icons/dribbble.html" }}</a>
-              </li>
-            {{ end }}
-            {{ with .instagram }}
-              <li class="bg-primary/10 text-primary flex size-8 items-center justify-center rounded-full">
-                <a class="" href="{{ . }}" aria-label="Instagram">{{ partial "icons/instagram.html" }}</a>
-              </li>
-            {{ end }}
-            {{ with .facebook }}
-              <li class="bg-primary/10 text-primary flex size-8 items-center justify-center rounded-full">
-                <a class="" href="{{ . }}" aria-label="Facebook">{{ partial "icons/facebook.html" }}</a>
-              </li>
-            {{ end }}
-            {{ with .twitter }}
-              <li class="bg-primary/10 text-primary flex size-8 items-center justify-center rounded-full">
-                <a class="" href="{{ . }}" aria-label="Twitter">{{ partial "icons/twitter.html" }}</a>
-              </li>
-            {{ end }}
-          </ul>
-        {{ end }}
+    <!-- Main Footer Content -->
+    <div class="grid gap-8 mb-12 md:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Company Info -->
+      <div>
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">{{ site.Params.company.name }}</h3>
+        <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.7; margin-bottom: 1rem;">
+          {{ site.Params.description }}
+        </p>
+        <p style="font-size: 0.875rem; color: #94A3B8;">
+          {{ i18n "founded" }} {{ site.Params.company.founded }}
+        </p>
       </div>
-      <div class="xl:col-span-2">
-        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
-        <ul class="flex flex-col gap-1 text-sm">
-          {{ range .Site.Menus.footer }}
-            <li class="text-center xl:text-start">
-              <a class="" href="{{ .URL }}">{{ .Name }}</a>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 style="font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">{{ i18n "navigation" }}</h4>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          {{ range site.Menus.main }}
+            <li style="margin-bottom: 0.5rem;">
+              <a href="{{ .URL }}" style="font-size: 0.875rem; color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
+                {{ .Name }}
+              </a>
             </li>
           {{ end }}
         </ul>
       </div>
-      <div class="xl:col-span-3">
-        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
-        <ul class="flex flex-col gap-3 text-sm">
-          {{ range .Site.Params.location }}
-            <li class="flex flex-col items-center gap-4 xl:flex-row">
-              <span class="text-primary">{{ partial "icons/geo-alt.html" }}</span>
-              <span class="text-center xl:text-start">{{ . }}</span>
+
+      <!-- Contact -->
+      <div>
+        <h4 style="font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">{{ i18n "contact" }}</h4>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 0.75rem;">
+            <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.25rem;">{{ i18n "address" }}:</p>
+            <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.5;">
+              Haus-Endt-Str. 90<br>
+              40593 Düsseldorf<br>
+              Germany
+            </p>
+          </li>
+          <li style="margin-bottom: 0.75rem;">
+            <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.25rem;">{{ i18n "phone" }}:</p>
+            <a href="tel:{{ site.Params.contact.phone }}" style="font-size: 0.875rem; color: #A78BFA; text-decoration: none;">
+              {{ site.Params.contact.phone }}
+            </a>
+          </li>
+          <li>
+            <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.25rem;">{{ i18n "email" }}:</p>
+            <a href="mailto:{{ site.Params.contact.email }}" style="font-size: 0.875rem; color: #A78BFA; text-decoration: none;">
+              {{ site.Params.contact.email }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal & Register Info -->
+      <div>
+        <h4 style="font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">{{ i18n "legal" }}</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; margin-bottom: 1.5rem;">
+          {{ range site.Menus.footer_legal }}
+            <li style="margin-bottom: 0.5rem;">
+              <a href="{{ .URL }}" style="font-size: 0.875rem; color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
+                {{ .Name }}
+              </a>
             </li>
           {{ end }}
         </ul>
-      </div>
-      <div class="xl:col-span-3">
-        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
-        <ul class="flex flex-col gap-1 text-sm">
-          {{ range .Site.Params.contact }}
-            <li class="text-center xl:text-start">{{ . }}</li>
-          {{ end }}
-        </ul>
+
+        <div style="font-size: 0.75rem; color: #94A3B8; line-height: 1.6;">
+          <p style="margin-bottom: 0.25rem;"><strong>Handelsregister:</strong></p>
+          <p style="margin-bottom: 0.5rem;">{{ site.Params.legal.registration_number }}</p>
+          <p>{{ site.Params.legal.registration_court }}</p>
+        </div>
       </div>
     </div>
-    <div class="text-center text-sm">
-      <div class="">
-        {{ with .Site.Params.copyright }}
-          <p class="">{{ . }}</p>
-        {{ end }}
+
+    <!-- Bottom Bar -->
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem;">
+      <div style="display: flex; flex-direction: column; gap: 1rem; text-align: center; align-items: center; lg:flex-direction: row; lg:justify-content: space-between;">
+        <div style="font-size: 0.875rem; color: #94A3B8;">
+          <p>{{ site.Params.copyright }}</p>
+          <p style="margin-top: 0.25rem;">Geschäftsführer: {{ site.Params.legal.managing_director }}</p>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <p style="font-size: 0.75rem; color: #94A3B8;">USt-IdNr.: {{ site.Params.legal.vat_id }}</p>
+        </div>
       </div>
+    </div>
+
+    <!-- DSGVO Notice -->
+    <div style="margin-top: 2rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem; border: 1px solid rgba(99, 102, 241, 0.2);">
+      <p style="font-size: 0.75rem; color: #CBD5E1; text-align: center; line-height: 1.6;">
+        Diese Website nutzt Formspree zur Kontaktformular-Verarbeitung. Weitere Informationen finden Sie in unserer
+        <a href="/datenschutz" style="color: #A78BFA; text-decoration: underline;">Datenschutzerklärung</a>.
+      </p>
     </div>
   </div>
 </footer>

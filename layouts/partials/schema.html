@@ -1,0 +1,107 @@
+{{ $description := .Site.Params.description }}
+{{ if .Description }}
+  {{ $description = .Description }}
+{{ else if .Summary }}
+  {{ $description = .Summary }}
+{{ end }}
+
+{{ $image := "" }}
+{{ if .Params.image }}
+  {{ $image = .Params.image | absURL }}
+{{ else if .Site.Params.image }}
+  {{ $image = .Site.Params.image | absURL }}
+{{ end }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  {{ with $image }}
+  "logo": "{{ . }}",
+  {{ end }}
+  "description": "{{ .Site.Params.description }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Haus-Endt-Str. 90",
+    "addressLocality": "Düsseldorf",
+    "postalCode": "40593",
+    "addressCountry": "DE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+49-151-54117171",
+    "contactType": "customer service",
+    "email": "daniel@algorithmo.de",
+    "availableLanguage": ["German", "English"]
+  },
+  "sameAs": [
+    {{ with .Site.Params.social.linkedin }}"{{ . }}",{{ end }}
+    {{ with .Site.Params.social.github }}"{{ . }}",{{ end }}
+    {{ with .Site.Params.social.twitter }}"https://twitter.com/{{ . }}"{{ end }}
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Dr. Daniel Cagara"
+  }
+}
+</script>
+
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ if eq .Type "post" }}BlogPosting{{ else }}WebPage{{ end }}",
+  "headline": "{{ .Title }}",
+  "description": "{{ $description }}",
+  "url": "{{ .Permalink }}",
+  {{ with $image }}
+  "image": "{{ . }}",
+  {{ end }}
+  {{ with .PublishDate }}
+  "datePublished": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",
+  {{ end }}
+  {{ with .Lastmod }}
+  "dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",
+  {{ end }}
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    {{ with $image }}
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ . }}"
+    }
+    {{ end }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "inLanguage": "{{ .Language.Lang }}"
+}
+</script>
+{{ end }}
+
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.description }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": ["de", "en"]
+}
+</script>
+{{ end }}

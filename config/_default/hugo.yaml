@@ -1,0 +1,52 @@
+baseURL: "https://algorithmo.com"
+title: "Algorithmo GmbH"
+summaryLength: 20
+defaultContentLanguage: "de"
+defaultContentLanguageInSubdir: false
+enableRobotsTXT: true
+enableEmoji: true
+enableGitInfo: false
+
+languages:
+  de:
+    languageName: "Deutsch"
+    languageCode: "de-DE"
+    weight: 1
+    title: "Algorithmo GmbH"
+  en:
+    languageName: "English"
+    languageCode: "en-US"
+    weight: 2
+    title: "Algorithmo GmbH"
+
+# Sitemap Configuration
+sitemap:
+  changefreq: "weekly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
+# Output Formats
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+  section:
+    - "HTML"
+    - "RSS"
+
+# Permalinks Configuration for SEO-friendly URLs
+permalinks:
+  post: "/:slug/"
+
+# Taxonomy Configuration
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+# services:
+#   googleAnalytics:
+#     id: G-MEASUREMENT_ID
+

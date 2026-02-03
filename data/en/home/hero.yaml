@@ -1,0 +1,13 @@
+enable: true
+
+title: "Build **software** that matters"
+text: "Full-stack development, AI integration, and marketing optimization for European businesses. Based in Düsseldorf."
+
+buttons:
+  - label: "View Services"
+    link: "#services"
+
+  - label: "Get in Touch"
+    link: "/contact"
+
+image: "images/hero-image.png"

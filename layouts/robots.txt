@@ -1,0 +1,29 @@
+User-agent: *
+{{ if hugo.IsProduction }}
+Allow: /
+{{ else }}
+Disallow: /
+{{ end }}
+
+# Sitemap
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Crawl-delay: 2

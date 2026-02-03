@@ -1,0 +1,26 @@
+enable: true
+
+title: "Our Services"
+text: "Focused expertise in three areas"
+
+cards:
+  - image: "images/services-web-development.png"
+    title: "Full-Stack Development"
+    text: "End-to-end application development. Mobile apps with React Native, web applications with React, scalable backends with Node.js and Python. Clean code, proper testing, production-ready."
+    button:
+      label: "Discuss Your Project"
+      link: "/contact"
+
+  - image: "images/services-web-development.png"
+    title: "AI Integration"
+    text: "Practical AI implementation. Connect OpenAI, Claude, or custom models to your products. Build intelligent features that solve real problems without unnecessary complexity."
+    button:
+      label: "Discuss Your Project"
+      link: "/contact"
+
+  - image: "images/services-web-development.png"
+    title: "Campaign Optimization"
+    text: "Performance marketing and analytics. Set up conversion tracking, optimize ad campaigns on Google and Meta, measure what drives results. Data-driven growth."
+    button:
+      label: "Discuss Your Project"
+      link: "/contact"

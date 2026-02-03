@@ -1,0 +1,13 @@
+enable: true
+
+title: "**Software** entwickeln, die zählt"
+text: "Full-Stack-Entwicklung, KI-Integration und Marketing-Optimierung für europäische Unternehmen. Standort Düsseldorf."
+
+buttons:
+  - label: "Services ansehen"
+    link: "#services"
+
+  - label: "Kontakt aufnehmen"
+    link: "/contact"
+
+image: "images/hero-image.png"

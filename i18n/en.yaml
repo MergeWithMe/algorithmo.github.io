@@ -1,0 +1,226 @@
+- id: readMore
+  translation: "Read More"
+
+- id: contactUs
+  translation: "Contact Us"
+
+- id: learnMore
+  translation: "Learn More"
+
+- id: getStarted
+  translation: "Get Started"
+
+- id: viewAll
+  translation: "View All"
+
+- id: backToHome
+  translation: "Back to Home"
+
+- id: pageNotFound
+  translation: "Page Not Found"
+
+- id: navigation
+  translation: "Navigation"
+
+- id: legal
+  translation: "Legal"
+
+- id: contact
+  translation: "Contact"
+
+- id: founded
+  translation: "Founded"
+
+- id: location
+  translation: "Location"
+
+- id: address
+  translation: "Address"
+
+- id: phone
+  translation: "Phone"
+
+- id: email
+  translation: "Email"
+
+- id: commercialRegister
+  translation: "Commercial Register"
+
+- id: managingDirector
+  translation: "Managing Director"
+
+# Contact Page
+- id: contactHeroTitle
+  translation: "Let's Build <span class='gradient-text'>Something Great</span>"
+
+- id: contactHeroSubtitle
+  translation: "Ready to transform your ideas into reality? Let's start the conversation."
+
+- id: getInTouch
+  translation: "Get in Touch"
+
+- id: getInTouchDescription
+  translation: "Whether you have a detailed specification or just an idea, we'd love to hear from you."
+
+- id: businessHours
+  translation: "Business Hours"
+
+- id: mondayFriday
+  translation: "Monday - Friday: 9:00 - 18:00 CET"
+
+- id: responseTime
+  translation: "We typically respond within 24 hours"
+
+- id: sendMessage
+  translation: "Send a Message"
+
+- id: sendMessageDescription
+  translation: "Fill out the form and we'll get back to you promptly."
+
+- id: name
+  translation: "Name"
+
+- id: company
+  translation: "Company"
+
+- id: serviceInterestedIn
+  translation: "Service Interested In"
+
+- id: selectService
+  translation: "Select a service..."
+
+- id: fullStackDev
+  translation: "Full-Stack Development"
+
+- id: aiIntegration
+  translation: "AI Integration"
+
+- id: campaignOpt
+  translation: "Campaign Optimization"
+
+- id: multipleServices
+  translation: "Multiple Services"
+
+- id: notSureYet
+  translation: "Not Sure Yet"
+
+- id: message
+  translation: "Message"
+
+- id: tellUsAboutProject
+  translation: "Tell us about your project..."
+
+- id: privacyConsent
+  translation: "I agree to the <a href='/en/datenschutz' style='color: #6366F1; font-weight: 600; text-decoration: underline;'>privacy policy</a> and consent to my data being processed."
+
+- id: requiredFields
+  translation: "* Required fields"
+
+- id: whatHappensNext
+  translation: "What Happens Next?"
+
+- id: ourSimpleProcess
+  translation: "Our simple 4-step process"
+
+- id: weReview
+  translation: "We Review"
+
+- id: within24Hours
+  translation: "Within 24 hours"
+
+- id: consultation
+  translation: "Consultation"
+
+- id: discussNeeds
+  translation: "Discuss your needs"
+
+- id: proposal
+  translation: "Proposal"
+
+- id: timelinePricing
+  translation: "Timeline & pricing"
+
+- id: kickoff
+  translation: "Kickoff"
+
+- id: weBeginWork
+  translation: "We begin work"
+
+# About Page
+- id: aboutHeroTitle
+  translation: "Software Engineering in <span style='background: linear-gradient(135deg, #DDD6FE 0%, #F3E8FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>Düsseldorf</span>"
+
+- id: aboutHeroSubtitle
+  translation: "We build software that works. Founded in 2026."
+
+- id: whatWeDo
+  translation: "What We Do"
+
+- id: threeThingsGoodAt
+  translation: "Three things we're really good at"
+
+- id: fullStackDevDesc
+  translation: "We build apps and backend systems. Mobile, web, APIs. React, React Native, Node.js, Python. The usual stack."
+
+- id: aiIntegrationDesc
+  translation: "We connect AI to existing products. OpenAI, Claude, custom models. Whatever makes sense for the problem."
+
+- id: campaignOptDesc
+  translation: "We set up analytics and optimize ad campaigns. Google Analytics, Meta Pixel, conversion tracking."
+
+- id: howWeWork
+  translation: "How We Work"
+
+- id: howWeWorkText1
+  translation: "We talk to you about what you need. We figure out if we can help. If yes, we build it. We don't do long proposals or strategy decks."
+
+- id: howWeWorkText2
+  translation: "Most projects start with a few weeks to scope things out properly. Then we build in iterations so you see progress."
+
+- id: ourApproach
+  translation: "Our Approach"
+
+- id: talkUnderstand
+  translation: "Talk & Understand"
+
+- id: talkUnderstandDesc
+  translation: "We discuss your needs and see if we're a good fit"
+
+- id: scopeProperly
+  translation: "Scope Properly"
+
+- id: scopeProperlyDesc
+  translation: "A few weeks to understand requirements in detail"
+
+- id: buildIterations
+  translation: "Build in Iterations"
+
+- id: buildIterationsDesc
+  translation: "You see progress regularly, we adjust as needed"
+
+- id: whoWeWorkWith
+  translation: "Who We Work With"
+
+- id: whoWeWorkWithText
+  translation: "Mostly small to medium businesses in DACH. Some startups, some established companies. Industry doesn't matter much — the engineering problems are usually similar."
+
+- id: primaryRegion
+  translation: "Primary Region"
+
+- id: coreServices
+  translation: "Core Services"
+
+- id: basedInDusseldorf
+  translation: "Based in Düsseldorf"
+
+- id: workWithClientsText
+  translation: "We work with clients across Germany and Europe."
+
+- id: companyDetails
+  translation: "Company Details"
+
+- id: readyToStart
+  translation: "Ready to Start?"
+
+- id: needHelpText
+  translation: "Need help with something? Let's talk about your project."

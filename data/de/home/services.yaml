@@ -1,0 +1,26 @@
+enable: true
+
+title: "Unsere Services"
+text: "Fokussierte Expertise in drei Bereichen"
+
+cards:
+  - image: "images/services-web-development.png"
+    title: "Full-Stack-Entwicklung"
+    text: "End-to-End-Anwendungsentwicklung. Mobile Apps mit React Native, Webanwendungen mit React, skalierbare Backends mit Node.js und Python. Sauberer Code, ordentliche Tests, produktionsreif."
+    button:
+      label: "Projekt besprechen"
+      link: "/contact"
+
+  - image: "images/services-web-development.png"
+    title: "KI-Integration"
+    text: "Praktische KI-Implementierung. Anbindung von OpenAI, Claude oder Custom-Modellen an Ihre Produkte. Intelligente Features entwickeln, die echte Probleme lösen, ohne unnötige Komplexität."
+    button:
+      label: "Projekt besprechen"
+      link: "/contact"
+
+  - image: "images/services-web-development.png"
+    title: "Kampagnen-Optimierung"
+    text: "Performance-Marketing und Analytics. Conversion-Tracking einrichten, Werbekampagnen auf Google und Meta optimieren, messen was Ergebnisse bringt. Datengetriebenes Wachstum."
+    button:
+      label: "Projekt besprechen"
+      link: "/contact"

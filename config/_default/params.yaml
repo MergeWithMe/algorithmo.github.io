@@ -1,0 +1,61 @@
+title: 'Algorithmo'
+description: 'Full-stack development, AI integration, and campaign tracking. Software engineering in Düsseldorf.'
+images:
+  - 'images/hero-image.png'
+image: 'images/hero-image.png'
+
+logo: 'logo.png'
+
+# SEO Configuration
+keywords:
+  - 'software development Düsseldorf'
+  - 'full-stack development Germany'
+  - 'AI integration'
+  - 'custom software development'
+  - 'React development'
+  - 'Python development'
+  - 'campaign tracking'
+  - 'Google Analytics setup'
+  - 'web development DACH'
+  - 'mobile app development'
+
+# Google Analytics (add your GA4 ID here)
+googleAnalytics: ''
+
+favicons:
+  themeColor: '#D04B6C'
+  backgroundColor: '#FFFFFF'
+  faviconColor: '#1d1d1f'
+
+# Company Information
+company:
+  name: 'Algorithmo GmbH'
+  tagline: 'Software that works'
+  founded: '2026'
+
+# Contact Information
+contact:
+  email: 'daniel@algorithmo.de'
+  phone: '+49 151 54117171'
+  address: 'Haus-Endt-Str. 90, 40593 Düsseldorf, Germany'
+
+# Legal Information (DSGVO Compliance)
+legal:
+  company_full_name: 'Algorithmo GmbH'
+  managing_director: 'Dr. Daniel Cagara'
+  registration_court: 'Amtsgericht Düsseldorf'
+  registration_number: 'HRB 111540'
+  vat_id: '[Pending - beantragt]'
+
+# Social Media
+social:
+  linkedin: 'https://linkedin.com/company/algorithmo'
+  github: 'https://github.com/algorithmo'
+  twitter: '#'
+  instagram: '#'
+
+# Location
+location:
+  - 'Haus-Endt-Str. 90, 40593 Düsseldorf, Germany'
+
+copyright: '© 2026 Algorithmo GmbH. Alle Rechte vorbehalten.'

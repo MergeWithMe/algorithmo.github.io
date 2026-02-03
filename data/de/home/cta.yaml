@@ -1,0 +1,8 @@
+enable: true
+
+title: "Bereit loszulegen?"
+text: "Erzählen Sie uns von Ihrem Projekt. Wir melden uns innerhalb von 24 Stunden bei Ihnen."
+image: "images/hero-image.png"
+button:
+  label: "Kontakt aufnehmen"
+  link: "/contact"

@@ -1,17 +1,22 @@
-<section class="py-16">
-  <div class="container mx-auto px-4">
-    {{ with .title }}
-      <h1 class="text-primary mb-8 text-center text-6xl font-bold">{{ . }}</h1>
-    {{ end }}
-    {{ with .image }}
-      <div class="mb-8 flex items-center justify-center">
-        {{ partial "utilities/image.html" (dict "src" . ) }}
-      </div>
-    {{ end }}
-    {{ with .button }}
-      <div class="flex items-center justify-center">
-        {{ partial "components/button/outline" (dict "label" .label "href" .link) }}
-      </div>
-    {{ end }}
+<section class="py-40 relative overflow-hidden gradient-animated">
+  <!-- Animated gradient mesh overlay -->
+  <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-5xl mx-auto text-center">
+      {{ with .title }}
+        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 2rem; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">{{ . }}</h2>
+      {{ end }}
+      {{ with .text }}
+        <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 4rem; font-weight: 400; max-width: 48rem; margin-left: auto; margin-right: auto;">{{ . }}</p>
+      {{ end }}
+      {{ with .button }}
+        <div class="flex items-center justify-center">
+          <a href="{{ .link }}" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 0.75rem; padding: 1.5rem 3rem; color: #6366F1; font-size: 1.25rem; font-weight: 700; transition: all 0.3s; background: #ffffff; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);" class="hover:bg-gray-50 hover:scale-105">
+            {{ .label }}
+          </a>
+        </div>
+      {{ end }}
+    </div>
   </div>
 </section>

@@ -1,36 +1,25 @@
-<section id="hero" class="hero py-8 xl:py-16">
-  <div class="container mx-auto grid gap-16 px-4 xl:grid-cols-2">
-    <div class="flex flex-col justify-center gap-8 xl:gap-16">
+<section id="hero" class="hero">
+  <div class="floating-orb"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-5xl mx-auto text-center">
       {{ with .title }}
-        <h1 class="text-primary title text-center text-6xl font-bold xl:text-start xl:text-8xl">
+        <h1 class="title">
           {{ . | markdownify }}
         </h1>
       {{ end }}
+
       {{ with .text }}
-        <p class="text-center xl:text-start">{{ . | markdownify }}</p>
+        <p class="text mx-auto">{{ . | markdownify }}</p>
       {{ end }}
+
       {{ if .buttons }}
-        <div class="flex flex-col items-center gap-4 xl:flex-row xl:gap-8">
-          {{ range $i, $e := .buttons }}
-            {{ if (eq $i 0) }}
-              <a class="bg-primary hover:bg-primary/90 rounded px-8 py-2 text-white duration-500" href="{{ .url }}">
-                {{ .label }}
-              </a>
-            {{ else }}
-              <a
-                class="border-primary text-primary hover:bg-primary flex items-center gap-2 rounded border px-8 py-2 duration-500 hover:text-white"
-                href="{{ .url }}"
-              >
-                {{ .label }}
-                {{ partial "icons/arrow-right" }}
-              </a>
-            {{ end }}
+        <div class="buttons justify-center">
+          {{ range .buttons }}
+            <a href="{{ .link }}">{{ .label }}</a>
           {{ end }}
         </div>
       {{ end }}
-    </div>
-    <div class="hidden items-center xl:flex">
-      {{ partial "utilities/image" (dict "src" .image "class" "max-w-full object-cover object-center") }}
     </div>
   </div>
 </section>

@@ -1,0 +1,17 @@
+enable: true
+
+title: "Why work with us"
+text: "What makes us different"
+
+points:
+  - title: "No Overhead"
+    text: "Small team, direct communication. You work with the people actually building your product."
+
+  - title: "DACH Focus"
+    text: "Based in Düsseldorf. We understand German business culture and GDPR requirements."
+
+  - title: "Production Quality"
+    text: "We write code we're proud of. Tested, documented, maintainable."
+
+  - title: "Fast Turnaround"
+    text: "Most projects start within 2 weeks. Regular updates, no surprises."

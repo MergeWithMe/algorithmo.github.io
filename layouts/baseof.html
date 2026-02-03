@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ .Language.Lang }}">
   <head>
     <!-- Title -->
     {{ if .IsHome }}
@@ -14,6 +14,7 @@
     <!-- Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{ $description := "" }}
     {{ if .IsHome }}
@@ -24,6 +25,45 @@
       {{ $description := .Site.Params.description }}
     {{ end }}
     <meta name="description" content="{{ $description }}" />
+
+    <!-- Keywords -->
+    {{ $keywords := slice }}
+    {{ if .Params.keywords }}
+      {{ $keywords = .Params.keywords }}
+    {{ else if .Site.Params.keywords }}
+      {{ $keywords = .Site.Params.keywords }}
+    {{ end }}
+    {{ with $keywords }}
+    <meta name="keywords" content="{{ delimit . ", " }}" />
+    {{ end }}
+
+    <!-- Author & Publisher -->
+    <meta name="author" content="{{ .Site.Title }}" />
+    <meta name="publisher" content="{{ .Site.Title }}" />
+    <meta name="copyright" content="© {{ now.Year }} {{ .Site.Title }}. All rights reserved." />
+
+    <!-- Robots -->
+    {{ if hugo.IsProduction }}
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    {{ else }}
+    <meta name="robots" content="noindex, nofollow" />
+    {{ end }}
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    <!-- Language Alternates (hreflang) -->
+    {{ if .IsTranslated }}
+      {{ range .AllTranslations }}
+        <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+      {{ end }}
+      <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+    {{ end }}
+
+    <!-- Cookiebot - Cookie Consent (must load before tracking scripts) -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e1587a4d-2961-4382-bbdd-f529cdb2ea72" type="text/javascript"></script>
 
     <!-- SEO -->
     {{ partial "google_analytics.html" . }}

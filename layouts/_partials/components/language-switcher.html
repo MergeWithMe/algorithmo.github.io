@@ -1,0 +1,33 @@
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+  {{ $currentLang := .Language.Lang }}
+  {{ range .Site.Languages }}
+    {{ if ne $currentLang .Lang }}
+      {{ $targetUrl := "/" }}
+      {{ if eq .Lang "en" }}
+        {{ $targetUrl = "/en/" }}
+      {{ end }}
+      
+      {{/* Try to find translated version of current page */}}
+      {{ if $.IsPage }}
+        {{ range $.Page.Translations }}
+          {{ if eq .Language.Lang .Lang }}
+            {{ $targetUrl = .RelPermalink }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      <a href="{{ $targetUrl }}"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.125rem 2rem; border-radius: 0.75rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%); border: 1px solid rgba(99, 102, 241, 0.2); color: #6366F1; font-size: 1.125rem; font-weight: 700; text-decoration: none; transition: all 0.2s; white-space: nowrap;"
+         onmouseover="this.style.background='linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%)'; this.style.borderColor='rgba(99, 102, 241, 0.3)'"
+         onmouseout="this.style.background='linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)'; this.style.borderColor='rgba(99, 102, 241, 0.2)'">
+        {{ if eq .Lang "de" }}
+          <span style="font-size: 1.25rem;">🇩🇪</span>
+          <span>DE</span>
+        {{ else if eq .Lang "en" }}
+          <span style="font-size: 1.25rem;">🇬🇧</span>
+          <span>EN</span>
+        {{ end }}
+      </a>
+    {{ end }}
+  {{ end }}
+</div>

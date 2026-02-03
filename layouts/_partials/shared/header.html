@@ -1,8 +1,7 @@
-<nav class="">
+<nav style="background: #ffffff !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.06); box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04); position: sticky; top: 0; z-index: 1000;">
   <div class="container mx-auto flex items-center justify-between px-4 py-6">
     <a class="flex items-center" href="{{ .Site.BaseURL }}">
-      {{ partial "utilities/image.html" (dict "src" "images/logo.png" "class" "size-6 xl:size-8") }}
-      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">{{ .Site.Title }}</span>
+      <img src="{{ (resources.Get "images/logo.png").Permalink }}" alt="Logo" class="h-8 xl:h-10" />
     </a>
     <button
       class="cursor-pointer xl:hidden"
@@ -20,8 +19,7 @@
     >
       <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
         <a class="flex items-center xl:hidden" href="{{ .Site.BaseURL }}">
-          {{ partial "utilities/image.html" (dict "src" "images/logo.png" "class" "size-6 xl:size-8") }}
-          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">{{ .Site.Title }}</span>
+          <img src="{{ (resources.Get "images/logo.png").Permalink }}" alt="Logo" class="h-8 xl:h-10" />
         </a>
         <button
           class="cursor-pointer xl:hidden"
@@ -47,6 +45,9 @@
           </li>
         {{ end }}
       </ul>
+      <div class="hidden xl:block">
+        {{ partial "components/language-switcher" . }}
+      </div>
     </div>
   </div>
 </nav>
