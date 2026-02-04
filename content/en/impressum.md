@@ -1,6 +1,6 @@
 ---
 title: 'Legal Notice'
-description: 'Legal information and imprint for Algorithmo GmbH. Information pursuant to § 5 TMG, contact details and commercial register entry.'
+description: 'Legal information and imprint for Algorithmo GmbH. Company information, contact details and commercial register entry.'
 layout: 'single'
 keywords:
   - "legal notice Algorithmo"
@@ -9,7 +9,7 @@ keywords:
   - "Algorithmo GmbH contact"
 ---
 
-## Information pursuant to § 5 TMG (German Telemedia Act)
+## Company Information
 
 **Algorithmo GmbH**
 Haus-Endt-Str. 90
@@ -32,28 +32,10 @@ Registration number: HRB 111540
 VAT identification number pursuant to §27a of the German VAT Act:
 [Pending - application in process]
 
-**Responsible for content pursuant to § 55 para. 2 RStV:**
+**Responsible for content:**
 Dr. Daniel Cagara
 Haus-Endt-Str. 90
 40593 Düsseldorf, Germany
-
----
-
-## Disclaimer
-
-### Liability for Content
-
-As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 para. 1 TMG. However, according to §§ 8 to 10 TMG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
-
-Obligations to remove or block the use of information in accordance with general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific legal violation. Upon becoming aware of corresponding legal violations, we will remove this content immediately.
-
-### Liability for Links
-
-Our website contains links to external third-party websites over whose content we have no control. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages.
-
-### Copyright
-
-The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.
 
 ---
 
