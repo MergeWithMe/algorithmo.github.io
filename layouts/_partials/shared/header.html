@@ -6,9 +6,9 @@
 
     <!-- Mobile menu toggle button -->
     <button
+      id="menuToggle"
       class="cursor-pointer xl:hidden"
       type="button"
-      onclick="document.getElementById('navbarContent').classList.toggle('hidden')"
       aria-label="Toggle Navigation"
     >
       {{ partial "heroicons/bars-4" }}
@@ -40,46 +40,70 @@
         {{ partial "components/language-switcher" . }}
       </div>
     </div>
-
-    <!-- Mobile menu overlay -->
-    <div
-      class="hidden fixed inset-0 bg-white xl:hidden"
-      style="z-index: 9999;"
-      id="navbarContent"
-    >
-      <!-- Mobile menu header -->
-      <div class="flex items-center justify-between px-4 py-6 border-b border-gray-200">
-        <a class="flex items-center" href="{{ .Site.BaseURL }}">
-          <img src="{{ (resources.Get "images/logo.png").Permalink }}" alt="Logo" class="h-8" />
-        </a>
-        <button
-          class="cursor-pointer"
-          type="button"
-          onclick="document.getElementById('navbarContent').classList.add('hidden')"
-          aria-label="Toggle Navigation"
-        >
-          {{ partial "heroicons/x-mark" }}
-        </button>
-      </div>
-
-      <!-- Mobile menu content -->
-      <div class="flex flex-col items-center justify-start px-4 py-12 space-y-8">
-        {{ $lang := "de" }}
-        {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
-        {{ $mainMenuName := printf "%s-main" $lang }}
-        {{ range index .Site.Menus $mainMenuName }}
-          <a class="text-2xl font-semibold text-gray-900" href="{{ .URL }}" onclick="document.getElementById('navbarContent').classList.add('hidden')">{{ .Name }}</a>
-        {{ end }}
-
-        {{ $buttonsMenuName := printf "%s-buttons" $lang }}
-        {{ range index .Site.Menus $buttonsMenuName }}
-          <div class="mt-4">
-            <a href="{{ .URL }}" class="inline-flex items-center justify-center rounded-xl px-10 py-5 text-white font-bold transition-all duration-300" style="font-size: 1.25rem; letter-spacing: -0.01em; background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%); box-shadow: 0 8px 32px rgba(99, 102, 241, 0.5); color: white !important;" onclick="document.getElementById('navbarContent').classList.add('hidden')">
-              {{ .Name }}
-            </a>
-          </div>
-        {{ end }}
-      </div>
-    </div>
   </div>
 </nav>
+
+<!-- Mobile menu overlay - outside nav -->
+<div
+  id="mobileMenu"
+  style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; background: #ffffff;"
+>
+  <!-- Mobile menu header -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 1rem; background: #ffffff; border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+    <a style="display: flex; align-items: center;" href="{{ .Site.BaseURL }}">
+      <img src="{{ (resources.Get "images/logo.png").Permalink }}" alt="Logo" style="height: 2rem;" />
+    </a>
+    <button
+      id="menuClose"
+      type="button"
+      style="cursor: pointer; background: none; border: none; padding: 0.5rem; font-size: 2rem; line-height: 1;"
+      aria-label="Close Menu"
+    >
+      ✕
+    </button>
+  </div>
+
+  <!-- Mobile menu content -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: calc(100% - 80px); gap: 2rem; padding: 2rem 1rem; background: #ffffff;">
+    {{ $lang := "de" }}
+    {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
+    {{ $mainMenuName := printf "%s-main" $lang }}
+    {{ range index .Site.Menus $mainMenuName }}
+      <a class="menu-link" style="font-size: 1.5rem; font-weight: 700; color: #111827; text-decoration: none;" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+
+    {{ $buttonsMenuName := printf "%s-buttons" $lang }}
+    {{ range index .Site.Menus $buttonsMenuName }}
+      <a class="menu-link" href="{{ .URL }}" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 0.75rem; padding: 1.25rem 2.5rem; color: white; font-weight: 700; font-size: 1.25rem; letter-spacing: -0.01em; background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%); box-shadow: 0 8px 32px rgba(99, 102, 241, 0.5); text-decoration: none; min-width: 250px; text-align: center;">
+        {{ .Name }}
+      </a>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+(function() {
+  var menu = document.getElementById('mobileMenu');
+  var toggle = document.getElementById('menuToggle');
+  var close = document.getElementById('menuClose');
+  var links = document.querySelectorAll('#mobileMenu .menu-link');
+
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      menu.style.display = 'block';
+    });
+  }
+
+  if (close) {
+    close.addEventListener('click', function() {
+      menu.style.display = 'none';
+    });
+  }
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.style.display = 'none';
+    });
+  });
+})();
+</script>
