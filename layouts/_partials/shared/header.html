@@ -8,7 +8,7 @@
     <button
       class="cursor-pointer xl:hidden"
       type="button"
-      onclick="document.getElementById('navbarContent').classList.toggle('-translate-y-full')"
+      onclick="document.getElementById('navbarContent').classList.toggle('hidden')"
       aria-label="Toggle Navigation"
     >
       {{ partial "heroicons/bars-4" }}
@@ -43,7 +43,7 @@
 
     <!-- Mobile menu overlay -->
     <div
-      class="fixed inset-0 -translate-y-full bg-white duration-500 xl:hidden"
+      class="hidden fixed inset-0 bg-white xl:hidden"
       style="z-index: 9999;"
       id="navbarContent"
     >
@@ -55,7 +55,7 @@
         <button
           class="cursor-pointer"
           type="button"
-          onclick="document.getElementById('navbarContent').classList.add('-translate-y-full')"
+          onclick="document.getElementById('navbarContent').classList.add('hidden')"
           aria-label="Toggle Navigation"
         >
           {{ partial "heroicons/x-mark" }}
@@ -68,13 +68,13 @@
         {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
         {{ $mainMenuName := printf "%s-main" $lang }}
         {{ range index .Site.Menus $mainMenuName }}
-          <a class="text-2xl font-semibold text-gray-900" href="{{ .URL }}" onclick="document.getElementById('navbarContent').classList.add('-translate-y-full')">{{ .Name }}</a>
+          <a class="text-2xl font-semibold text-gray-900" href="{{ .URL }}" onclick="document.getElementById('navbarContent').classList.add('hidden')">{{ .Name }}</a>
         {{ end }}
 
         {{ $buttonsMenuName := printf "%s-buttons" $lang }}
         {{ range index .Site.Menus $buttonsMenuName }}
           <div class="mt-4">
-            <a href="{{ .URL }}" class="inline-flex items-center justify-center rounded-xl px-10 py-5 text-white font-bold transition-all duration-300" style="font-size: 1.25rem; letter-spacing: -0.01em; background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%); box-shadow: 0 8px 32px rgba(99, 102, 241, 0.5); color: white !important;" onclick="document.getElementById('navbarContent').classList.add('-translate-y-full')">
+            <a href="{{ .URL }}" class="inline-flex items-center justify-center rounded-xl px-10 py-5 text-white font-bold transition-all duration-300" style="font-size: 1.25rem; letter-spacing: -0.01em; background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%); box-shadow: 0 8px 32px rgba(99, 102, 241, 0.5); color: white !important;" onclick="document.getElementById('navbarContent').classList.add('hidden')">
               {{ .Name }}
             </a>
           </div>
