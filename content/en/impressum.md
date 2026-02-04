@@ -17,7 +17,7 @@ Haus-Endt-Str. 90
 Germany
 
 **Represented by:**
-Dr. Daniel Cagara, Managing Director
+Dr. Daniel Cagara
 
 **Contact:**
 Phone: +49 151 54117171
@@ -31,11 +31,6 @@ Registration number: HRB 111540
 **VAT ID:**
 VAT identification number pursuant to §27a of the German VAT Act:
 [Pending - application in process]
-
-**Responsible for content:**
-Dr. Daniel Cagara
-Haus-Endt-Str. 90
-40593 Düsseldorf, Germany
 
 ---
 

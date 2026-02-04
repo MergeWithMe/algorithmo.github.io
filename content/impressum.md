@@ -17,7 +17,7 @@ Haus-Endt-Str. 90
 Deutschland
 
 **Vertreten durch:**
-Dr. Daniel Cagara, Geschäftsführer
+Dr. Daniel Cagara
 
 **Kontakt:**
 Telefon: +49 151 54117171
@@ -31,11 +31,6 @@ Registernummer: HRB 111540
 **Umsatzsteuer-ID:**
 Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
 [Pending - beantragt]
-
-**Verantwortlich für den Inhalt:**
-Dr. Daniel Cagara
-Haus-Endt-Str. 90
-40593 Düsseldorf
 
 ---
 
