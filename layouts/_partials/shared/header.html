@@ -32,14 +32,16 @@
         </button>
       </div>
       <ul class="flex flex-col gap-8 xl:flex-row">
-        {{ range $.Site.Menus.main }}
+        {{ $mainMenuName := printf "%s-main" .Language.Lang }}
+        {{ range index .Site.Menus $mainMenuName }}
           <li class="text-center">
             <a class="text-primary" href="{{ .URL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>
       <ul class="flex flex-col gap-8 xl:flex-row">
-        {{ range $.Site.Menus.buttons }}
+        {{ $buttonsMenuName := printf "%s-buttons" .Language.Lang }}
+        {{ range index .Site.Menus $buttonsMenuName }}
           <li class="text-center">
             {{ partial "components/button/primary" (dict "label" .Name "href" .URL ) }}
           </li>
