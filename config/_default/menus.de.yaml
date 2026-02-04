@@ -1,28 +1,28 @@
 main:
   - name: "Start"
-    url: "/"
+    url: "/de/"
     weight: 1
   - name: "Über uns"
-    url: "/about"
+    url: "/de/about"
     weight: 2
 
 buttons:
   - name: "Kontakt"
-    url: "/contact"
+    url: "/de/contact"
     weight: 1
 
 footer:
   - name: "Start"
-    url: "/"
+    url: "/de/"
     weight: 1
   - name: "Über uns"
-    url: "/about"
+    url: "/de/about"
     weight: 2
 
 footer_legal:
   - name: "Impressum"
-    url: "/impressum"
+    url: "/de/impressum"
     weight: 1
   - name: "Datenschutz"
-    url: "/datenschutz"
+    url: "/de/datenschutz"
     weight: 2

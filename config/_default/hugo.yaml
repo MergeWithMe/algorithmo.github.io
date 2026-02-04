@@ -2,7 +2,7 @@ baseURL: "https://algorithmo.de"
 title: "Algorithmo GmbH"
 summaryLength: 20
 defaultContentLanguage: "de"
-defaultContentLanguageInSubdir: false
+defaultContentLanguageInSubdir: true
 enableRobotsTXT: true
 enableEmoji: true
 enableGitInfo: false
