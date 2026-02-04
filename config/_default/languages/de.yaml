@@ -1,2 +1,29 @@
 params:
   description: "Full-Stack-Entwicklung, KI-Integration und Kampagnen-Tracking. Software-Engineering in Düsseldorf."
+
+menus:
+  main:
+    - name: "Start"
+      url: "/"
+      weight: 1
+    - name: "Über uns"
+      url: "/about"
+      weight: 2
+  buttons:
+    - name: "Kontakt"
+      url: "/contact"
+      weight: 1
+  footer:
+    - name: "Start"
+      url: "/"
+      weight: 1
+    - name: "Über uns"
+      url: "/about"
+      weight: 2
+  footer_legal:
+    - name: "Impressum"
+      url: "/impressum"
+      weight: 1
+    - name: "Datenschutz"
+      url: "/datenschutz"
+      weight: 2

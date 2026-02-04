@@ -18,7 +18,7 @@
       <div>
         <h4 style="font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">{{ i18n "navigation" }}</h4>
         <ul style="list-style: none; padding: 0; margin: 0;">
-          {{ range .Site.Menus.main }}
+          {{ range $.Site.Menus.main }}
             <li style="margin-bottom: 0.5rem;">
               <a href="{{ .URL }}" style="font-size: 0.875rem; color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
                 {{ .Name }}
@@ -59,7 +59,7 @@
       <div>
         <h4 style="font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">{{ i18n "legal" }}</h4>
         <ul style="list-style: none; padding: 0; margin: 0; margin-bottom: 1.5rem;">
-          {{ range .Site.Menus.footer_legal }}
+          {{ range $.Site.Menus.footer_legal }}
             <li style="margin-bottom: 0.5rem;">
               <a href="{{ .URL }}" style="font-size: 0.875rem; color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
                 {{ .Name }}
