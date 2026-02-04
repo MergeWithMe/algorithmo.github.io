@@ -16,7 +16,7 @@ Haus-Endt-Str. 90
 40593 Düsseldorf
 Germany
 
-**Represented by:**
+**Authorized Managing Director:**
 Dr. Daniel Cagara
 
 **Contact:**

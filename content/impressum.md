@@ -16,7 +16,7 @@ Haus-Endt-Str. 90
 40593 Düsseldorf
 Deutschland
 
-**Vertreten durch:**
+**Vertretungsberechtiger Geschäftsführer:**
 Dr. Daniel Cagara
 
 **Kontakt:**
