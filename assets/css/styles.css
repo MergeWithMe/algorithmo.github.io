@@ -196,6 +196,18 @@ nav a.bg-primary * {
 .service-card:hover, .portfolio-card:hover {
   transform: translateY(-12px) scale(1.03);
   box-shadow: 0 32px 80px rgba(99, 102, 241, 0.35);
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+}
+
+.service-card:hover h3,
+.service-card:hover p,
+.portfolio-card:hover h3,
+.portfolio-card:hover p {
+  color: #ffffff !important;
+}
+
+.service-card:hover a {
+  color: #ffffff !important;
 }
 
 /* Large, bold section headers */
