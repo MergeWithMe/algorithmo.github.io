@@ -3,6 +3,8 @@
     <a class="flex items-center" href="{{ .Site.BaseURL }}">
       <img src="{{ (resources.Get "images/logo.png").Permalink }}" alt="Logo" class="h-8 xl:h-10" />
     </a>
+
+    <!-- Mobile menu toggle button -->
     <button
       class="cursor-pointer xl:hidden"
       type="button"
@@ -11,18 +13,46 @@
       aria-label="Toggle Navigation"
     >
       {{ partial "heroicons/bars-4" }}
-
     </button>
+
+    <!-- Desktop menu - hidden on mobile -->
+    <div class="hidden xl:flex xl:items-center xl:gap-8">
+      <ul class="flex flex-row gap-8">
+        {{ $lang := "de" }}
+        {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
+        {{ $mainMenuName := printf "%s-main" $lang }}
+        {{ range index .Site.Menus $mainMenuName }}
+          <li>
+            <a class="text-primary" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+      <ul class="flex flex-row gap-8">
+        {{ $lang := "de" }}
+        {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
+        {{ $buttonsMenuName := printf "%s-buttons" $lang }}
+        {{ range index .Site.Menus $buttonsMenuName }}
+          <li>
+            {{ partial "components/button/primary" (dict "label" .Name "href" .URL ) }}
+          </li>
+        {{ end }}
+      </ul>
+      <div>
+        {{ partial "components/language-switcher" . }}
+      </div>
+    </div>
+
+    <!-- Mobile menu overlay -->
     <div
-      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:hidden"
       id="navbarContent"
     >
-      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
-        <a class="flex items-center xl:hidden" href="{{ .Site.BaseURL }}">
-          <img src="{{ (resources.Get "images/logo.png").Permalink }}" alt="Logo" class="h-8 xl:h-10" />
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6">
+        <a class="flex items-center" href="{{ .Site.BaseURL }}">
+          <img src="{{ (resources.Get "images/logo.png").Permalink }}" alt="Logo" class="h-8" />
         </a>
         <button
-          class="cursor-pointer xl:hidden"
+          class="cursor-pointer"
           type="button"
           data-toggle-target="#navbarContent"
           data-toggle-class="-translate-y-full"
@@ -31,17 +61,17 @@
           {{ partial "heroicons/x-mark" }}
         </button>
       </div>
-      <ul class="flex flex-col gap-8 xl:flex-row">
+      <ul class="flex flex-col gap-8 items-center">
         {{ $lang := "de" }}
         {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
         {{ $mainMenuName := printf "%s-main" $lang }}
         {{ range index .Site.Menus $mainMenuName }}
           <li class="text-center">
-            <a class="text-primary" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="text-primary text-2xl" href="{{ .URL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>
-      <ul class="flex flex-col gap-8 xl:flex-row">
+      <ul class="flex flex-col gap-8 items-center">
         {{ $lang := "de" }}
         {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
         {{ $buttonsMenuName := printf "%s-buttons" $lang }}
@@ -51,7 +81,7 @@
           </li>
         {{ end }}
       </ul>
-      <div class="hidden xl:block">
+      <div>
         {{ partial "components/language-switcher" . }}
       </div>
     </div>
