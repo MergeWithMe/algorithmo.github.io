@@ -3,11 +3,23 @@
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/de/">
-    <link rel="canonical" href="/de/">
+    <script>
+        // Get user's browser language
+        const userLang = navigator.language || navigator.userLanguage;
+
+        // Check if English, otherwise default to German
+        if (userLang.startsWith('en')) {
+            window.location.replace("/en/");
+        } else {
+            window.location.replace("/de/");
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/de/">
+    </noscript>
 </head>
 <body>
-    <p>Redirecting to <a href="/de/">German version</a>...</p>
-    <script>window.location.replace("/de/");</script>
+    <p>Redirecting...</p>
+    <p><a href="/de/">Deutsch</a> | <a href="/en/">English</a></p>
 </body>
 </html>
