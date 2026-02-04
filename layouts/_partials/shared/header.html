@@ -32,7 +32,9 @@
         </button>
       </div>
       <ul class="flex flex-col gap-8 xl:flex-row">
-        {{ $mainMenuName := printf "%s-main" .Language.Lang }}
+        {{ $lang := "de" }}
+        {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
+        {{ $mainMenuName := printf "%s-main" $lang }}
         {{ range index .Site.Menus $mainMenuName }}
           <li class="text-center">
             <a class="text-primary" href="{{ .URL }}">{{ .Name }}</a>
@@ -40,7 +42,9 @@
         {{ end }}
       </ul>
       <ul class="flex flex-col gap-8 xl:flex-row">
-        {{ $buttonsMenuName := printf "%s-buttons" .Language.Lang }}
+        {{ $lang := "de" }}
+        {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
+        {{ $buttonsMenuName := printf "%s-buttons" $lang }}
         {{ range index .Site.Menus $buttonsMenuName }}
           <li class="text-center">
             {{ partial "components/button/primary" (dict "label" .Name "href" .URL ) }}

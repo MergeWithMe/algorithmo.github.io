@@ -18,7 +18,9 @@
       <div>
         <h4 style="font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">{{ i18n "navigation" }}</h4>
         <ul style="list-style: none; padding: 0; margin: 0;">
-          {{ $mainMenuName := printf "%s-main" .Language.Lang }}
+          {{ $lang := "de" }}
+          {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
+          {{ $mainMenuName := printf "%s-main" $lang }}
           {{ range index .Site.Menus $mainMenuName }}
             <li style="margin-bottom: 0.5rem;">
               <a href="{{ .URL }}" style="font-size: 0.875rem; color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
@@ -60,7 +62,9 @@
       <div>
         <h4 style="font-size: 1.125rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">{{ i18n "legal" }}</h4>
         <ul style="list-style: none; padding: 0; margin: 0; margin-bottom: 1.5rem;">
-          {{ $legalMenuName := printf "%s-footer_legal" .Language.Lang }}
+          {{ $lang := "de" }}
+          {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
+          {{ $legalMenuName := printf "%s-footer_legal" $lang }}
           {{ range index .Site.Menus $legalMenuName }}
             <li style="margin-bottom: 0.5rem;">
               <a href="{{ .URL }}" style="font-size: 0.875rem; color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
