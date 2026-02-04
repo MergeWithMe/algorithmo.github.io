@@ -93,8 +93,8 @@
     <!-- DSGVO Notice -->
     <div style="margin-top: 2rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem; border: 1px solid rgba(99, 102, 241, 0.2);">
       <p style="font-size: 0.75rem; color: #CBD5E1; text-align: center; line-height: 1.6;">
-        Diese Website nutzt Formspree zur Kontaktformular-Verarbeitung. Weitere Informationen finden Sie in unserer
-        <a href="/datenschutz" style="color: #A78BFA; text-decoration: underline;">Datenschutzerklärung</a>.
+        {{ i18n "formspreeNotice" | default "Diese Website nutzt Formspree zur Kontaktformular-Verarbeitung. Weitere Informationen finden Sie in unserer" }}
+        <a href="{{ relLangURL "datenschutz" }}" style="color: #A78BFA; text-decoration: underline;">{{ i18n "privacyPolicy" | default "Datenschutzerklärung" }}</a>.
       </p>
     </div>
   </div>
