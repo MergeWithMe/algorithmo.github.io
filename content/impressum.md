@@ -36,9 +36,6 @@ Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
 
 ## Streitschlichtung
 
-Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-https://ec.europa.eu/consumers/odr
+Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht bereit.
 
-Unsere E-Mail-Adresse finden Sie oben im Impressum.
-
-Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+Unser Unternehmen ist gemäß den gesetzlichen Bestimmungen vom Anwendungsbereich der Barrierefreiheitsanforderungen und somit von der Pflicht zur Erstellung und Bereitstellung einer Barrierefreiheitserklärung ausgenommen.

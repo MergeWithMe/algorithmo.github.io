@@ -36,10 +36,9 @@ VAT identification number pursuant to §27a of the German VAT Act:
 
 ## Dispute Resolution
 
-The European Commission provides a platform for online dispute resolution (ODR):  
-https://ec.europa.eu/consumers/odr
+We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board.
 
-We are neither willing nor obligated to participate in dispute resolution proceedings before a consumer arbitration board.
+Our company is exempt from the scope of accessibility requirements according to legal provisions and therefore from the obligation to create and provide an accessibility statement.
 
 ---
 
