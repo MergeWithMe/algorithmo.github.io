@@ -8,8 +8,7 @@
     <button
       class="cursor-pointer xl:hidden"
       type="button"
-      data-toggle-target="#navbarContent"
-      data-toggle-class="-translate-y-full"
+      onclick="document.getElementById('navbarContent').classList.toggle('-translate-y-full')"
       aria-label="Toggle Navigation"
     >
       {{ partial "heroicons/bars-4" }}
@@ -56,8 +55,7 @@
         <button
           class="cursor-pointer"
           type="button"
-          data-toggle-target="#navbarContent"
-          data-toggle-class="-translate-y-full"
+          onclick="document.getElementById('navbarContent').classList.add('-translate-y-full')"
           aria-label="Toggle Navigation"
         >
           {{ partial "heroicons/x-mark" }}
@@ -70,13 +68,15 @@
         {{ if hasPrefix .RelPermalink "/en/" }}{{ $lang = "en" }}{{ end }}
         {{ $mainMenuName := printf "%s-main" $lang }}
         {{ range index .Site.Menus $mainMenuName }}
-          <a class="text-2xl font-semibold text-gray-900" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="text-2xl font-semibold text-gray-900" href="{{ .URL }}" onclick="document.getElementById('navbarContent').classList.add('-translate-y-full')">{{ .Name }}</a>
         {{ end }}
 
         {{ $buttonsMenuName := printf "%s-buttons" $lang }}
         {{ range index .Site.Menus $buttonsMenuName }}
           <div class="mt-4">
-            {{ partial "components/button/primary" (dict "label" .Name "href" .URL ) }}
+            <a href="{{ .URL }}" class="inline-flex items-center justify-center rounded-xl px-10 py-5 text-white font-bold transition-all duration-300" style="font-size: 1.25rem; letter-spacing: -0.01em; background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%); box-shadow: 0 8px 32px rgba(99, 102, 241, 0.5); color: white !important;" onclick="document.getElementById('navbarContent').classList.add('-translate-y-full')">
+              {{ .Name }}
+            </a>
           </div>
         {{ end }}
       </div>
